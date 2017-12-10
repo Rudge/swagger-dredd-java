@@ -1,5 +1,6 @@
 package com.github.rudge.poc.domain;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.Entity;
@@ -20,15 +21,12 @@ public class User implements Serializable{
     private long id;
 
     @NotBlank
-    @NotNull
     private String name;
 
     @NotBlank
-    @NotNull
     private String lastName;
 
-    @NotBlank
-    @NotNull
+    @Email
     private String email;
 
     private String phone;
